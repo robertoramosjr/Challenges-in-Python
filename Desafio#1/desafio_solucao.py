@@ -8,15 +8,14 @@
 
 """
 
-nome = 'Roberto'
-idade = 29
-altura = 1.81
-e_maior = idade > 18
-peso = 110
-imc = peso / altura ** 2
-ano_atual = 2022
-ano_nascimento = ano_atual - idade
+name = input('Qual seu nome?')
+age = int(input ('Qual sua idade?'))
+height = float(input('Qual sua altura?'))
+weight = int(input('Qual seu peso? (em kg)'))
+imc = weight / height ** 2
+nowaday_year = input('Que ano você está?')
+birth_year = nowaday_year - age
 
-print(f'{nome} tem {idade} anos, {altura} de altura e pesa {peso} kg.')
-print(f'o IMC de {nome} é {imc:.2f}.')
-print(f'{nome} nasceu em {ano_nascimento}.')
+print(f'{name} tem {age} anos, {height} de altura e pesa {weight} kg.')
+print(f'o IMC de {name} é {imc:.2f}.')
+print(f'{name} nasceu em {birth_year}.')
