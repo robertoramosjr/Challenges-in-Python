@@ -1,6 +1,10 @@
 """
 create an algorithm that checks if a CPF is valid or not.
 """
+sum_tenth_digit = 0
+x = 0
+sum_eleventh_digit = 0
+y = 0
 
 cpf = input('Insira seu CPF, sem pontos \n')
 
@@ -15,11 +19,8 @@ for number in cpf_in_list:
     number_as_int = int(number)
     cpf_in_int_list.append(number_as_int)
 
-
 factors_to_check_tenth_digit = list(range(10, 1, -1))
 
-sum_tenth_digit = 0
-x = 0
 while x <= 8:
     multiplied_number = cpf_in_int_list[x] * factors_to_check_tenth_digit[x]
     sum_tenth_digit += multiplied_number
@@ -34,12 +35,10 @@ else:
 
 factor_to_check_eleventh_digit = list(range(11, 1, -1))
 
-sum_eleventh_digit = 0
-x = 0
-while x <= 9:
-    new_multiplied_number = cpf_in_int_list[x] * factor_to_check_eleventh_digit[x]
+while y <= 9:
+    new_multiplied_number = cpf_in_int_list[y] * factor_to_check_eleventh_digit[y]
     sum_eleventh_digit += new_multiplied_number
-    x += 1
+    y += 1
 
 eleventh_digit_validation = 11 - (sum_eleventh_digit % 11)
 
@@ -48,7 +47,7 @@ if eleventh_digit_validation > 9:
 else:
     digit_eleven = eleventh_digit_validation
 
-if digit_ten == cpf_in_int_list[10] and digit_eleven == cpf_in_int_list[-1]:
+if digit_ten == cpf_in_int_list[-2] and digit_eleven == cpf_in_int_list[-1]:
     print('CPF válido')
 else:
     print('CPF inválido')
