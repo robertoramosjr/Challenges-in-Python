@@ -8,14 +8,14 @@
 
 """
 
-name = input('Qual seu nome?')
-age = int(input ('Qual sua idade?'))
-height = float(input('Qual sua altura?'))
-weight = int(input('Qual seu peso? (em kg)'))
+name = input('Qual seu nome? \n')
+age = int(input ('Qual sua idade? \n'))
+height = float(input('Qual sua altura? \n'))
+weight = int(input('Qual seu peso? (em kg) \n'))
 imc = weight / height ** 2
-nowaday_year = input('Que ano você está?')
+nowaday_year = int(input('Que ano você está? \n'))
 birth_year = nowaday_year - age
 
-print(f'{name} tem {age} anos, {height} de altura e pesa {weight} kg.')
+print(f'{name} tem {age} anos, {height} m de altura e pesa {weight} kg.')
 print(f'o IMC de {name} é {imc:.2f}.')
 print(f'{name} nasceu em {birth_year}.')
