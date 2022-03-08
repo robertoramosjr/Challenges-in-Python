@@ -79,5 +79,9 @@ eleventh_digit_validation = eleventh_digit_validation_calculus()
 
 digit_eleven = define_digit_eleven()
 
-print('CPF válido') if digit_ten == cpf_in_int_list[-2] and digit_eleven == cpf_in_int_list[-1]\
+sequence = cpf[0] * len(cpf)
+
+print('CPF válido') if digit_ten == cpf_in_int_list[-2] \
+    and digit_eleven == cpf_in_int_list[-1] \
+    and not sequence \
     else print('CPF inválido')
