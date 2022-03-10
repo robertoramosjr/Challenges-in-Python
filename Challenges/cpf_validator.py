@@ -54,7 +54,7 @@ factor_to_check_eleventh_digit = list(range(11, 1, -1))
 factors_to_check_tenth_digit = list(range(10, 1, -1))
 
 
-cpf = input('Insira seu CPF, sem pontos \n')
+cpf = input('Insira um CPF, sem pontos \n')
 
 while not cpf.isdigit() or len(cpf) != 11:
     print('Este CPF é inválido, os possíveis CPFs admitem 11 números.')
@@ -64,8 +64,7 @@ cpf_in_list = list(cpf)
 cpf_in_int_list = []
 
 for number in cpf_in_list:
-    number_as_int = int(number)
-    cpf_in_int_list.append(number_as_int)
+    cpf_in_int_list.append(int(number))
 
 sum_tenth_digit = calculate_ten_digit()
 
