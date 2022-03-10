@@ -4,14 +4,14 @@
 
 
 def salutation(sal, name):
-    print(f'{sal}, {name}!!!')
+    print(f'{sal} {name}!!!')
 
 """
 2 - Create a function that takes 3 numbers as parameters and prints the sum between then.
 """
 
 
-def three_numbers_sum(num1, num2, num3):
+def sum_three_numbers(num1, num2, num3):
     print(num1 + num2 + num3)
 
 """
@@ -34,9 +34,9 @@ If it's divisible by 5 and 3 returns fizz-buzz. If it's not divisible by 3 or 5 
 def fizz_buzz(num):
     if num % 3 == 0 and num % 5 == 0:
         return 'Fizz-Buzz'
-    elif num % 5 == 0:
+    if num % 5 == 0:
         return 'Buzz'
-    elif num % 3 == 0:
+    if num % 3 == 0:
         return 'Fizz'
     return f'{num}'
 
